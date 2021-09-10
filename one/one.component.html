@@ -1,0 +1,31 @@
+<body >
+  <h1>Fill the Form</h1>
+<div class="container">
+    
+    <form [formGroup]="uploadForm">
+        <div class="row mb-3 justify-content-md-center">
+            <label for="title" class="col-sm-2 col-form-label">Title :</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" >
+              </div>
+        </div>
+        <div class="row mb-3 justify-content-md-center">
+            <label for="img1" class="col-sm-2 col-form-label">Image :</label>
+              <div class="col-sm-3">
+                <input type="file" class="form-control" (change)="onSelect($event)">
+              </div>
+        </div>
+        <div class="row mb-3 justify-content-md-center">
+            <label for="img2" class="col-sm-2 col-form-label">Thumbnail :</label>
+              <div class="col-sm-3">
+                <input type="file" class="form-control"(change)="onSelect2($event)">
+              </div>
+        </div>
+        <div class="mb-3 d-grid gap-2 d-md-flex justify-content-md-center">
+            <button type="button" class="btn btn-primary" (click)="onUpload()">Upload </button>
+            <button class="btn btn-danger " (click)="allPhotos()"> Next</button>
+        </div>
+        
+</form>
+</div>        
+</body>

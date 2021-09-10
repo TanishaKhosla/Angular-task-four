@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="col-12">
+        <div class="row mb-3 justify-content-md-center">
+            <button type="button" class="btn btn-danger" (click)="userInput()">Next</button>
+            <div *ngFor="let post of photo">
+              <h2>Title: {{post?.title}}</h2>
+                <h2>URL:</h2><img src= "{{post?.url}}"/>
+              <h2>Pic Thumbnail:</h2><img src= "{{post?.thumbnailUrl}}">
+            </div>
+        </div>
+    </div>
+</div>
